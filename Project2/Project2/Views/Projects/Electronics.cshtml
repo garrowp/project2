@@ -1,0 +1,21 @@
+﻿@model Project2.Models.ProjectCategory
+
+@{
+    ViewBag.Title = "Electronics";
+}
+
+<div class="container projects">
+    <h1>Electronic Projects</h1>
+
+    <div class="row">
+        @foreach (Project2.Models.Project project in Model.Projects) {
+            <div class="col-sm-4 text-center">
+                <a href="@Url.Action("Project", "Projects", new { Type = Model.ProjectTypeID, ProjectID = project.ProjectID })">
+                    <img src="@Url.Content(project.ProjectImage)" /> </a>
+            <h2>@Html.ActionLink(project.ProjectName, "Project", "Projects", new { Type = Model.ProjectTypeID, ProjectID = project.ProjectID }, null)</h2>
+</div>
+        }
+    </div>
+</div>
+
+

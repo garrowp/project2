@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@section Hero{
+    <section class="hero hero-home">
+        <div class="overlay">
+        </div>
+        <video loop muted autoplay>
+            <source src="~/Content/videos/heroVideo2.mp4" type="video/mp4" />
+        </video>
+    </section>
+}
+
+<div class="separator">
+
+</div>
+
+<section class="projects">
+    <div class="container">
+        <h3 class="text-center">FEATURED</h3>
+        <h1 class="text-center">PROJECTS</h1>
+
+        <div class="row">
+            <div class="project col-md-4 col-sm-6 col-xs-12">
+                <div class="col-xs-12">
+                    <a href="@Url.Action("Project", "Projects", new { Type = "Wood", ProjectID = 1 })">
+                        <img src="~/Content/images/plaque.jpg">
+                    </a>
+                        <h4>@Html.ActionLink("Mission Plaque", "Project", "Projects", new { Type = "Wood", ProjectID = 1 }, null)</h4>
+                        <h6>A plaque for retruned missionaries</h6>
+</div>
+            </div>
+
+            <div class="project col-md-4 col-sm-6 col-xs-12">
+                <div class="col-xs-12">
+                    <a href="@Url.Action("Project", "Projects", new { Type = "Electronics", ProjectID = 1 })">
+                        <img src="~/Content/images/timer.jpg">
+                    </a>
+                        <h4>@Html.ActionLink("Track Timer", "Project", "Projects", new { Type = "Electronics", ProjectID = 1 }, null)</h4>
+                        <h6>Track and Field timer</h6>
+</div>
+            </div>
+
+            <div class="project col-md-4 col-sm-6 col-xs-12">
+                <div class="col-xs-12">
+                    <a href="@Url.Action("Project", "Projects", new { Type = "Wood", ProjectID = 2 })">
+                        <img src="~/Content/images/rome.jpeg">
+                    </a>
+                        <h4>@Html.ActionLink("Skylines", "Project", "Projects", new { Type = "Wood", ProjectID = 2 }, null)</h4>
+                        <h6>Skylines of whatever city you want</h6>
+</div>
+            </div>
+        </div>
+    </div>  
+</section>
+
+<div class="separator">
+
+</div>

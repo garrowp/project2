@@ -1,0 +1,67 @@
+﻿@model Project2.Models.ProjectFull
+@{
+    ViewBag.Title = "Project";
+}
+
+<div class="container projects">
+    <h1>@Model.project.ProjectName</h1>
+    <div class="row">
+        <div class="col-sm-4">
+            <img src="@Url.Content(Model.project.ProjectImage)" />
+        </div>
+        <div class="col-sm-8">
+            <div class="row">
+                <h3>@Model.project.ProjectDescription</h3>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <h5>Materials Required:</h5>
+                </div>
+                <div class="col-xs-9">
+                    <ol>
+                        @foreach(Project2.Models.ProjectMaterial material in Model.ProjectMaterials) {
+                            <li><h5>@Model.Materials.Single(x => x.MaterialID == material.MaterialID).MaterialDescription</h5></li>
+                        }
+                    </ol>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <h5>Tools Required:</h5>
+                </div>
+                <div class="col-xs-9">
+                    <ul>
+                        @foreach(Project2.Models.ProjectTool tool in Model.ProjectTools) {
+                            <li><h5>@Model.Tools.Single(x => x.ToolID == tool.ToolID).ToolDescription</h5></li>
+                        }
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-3">
+                    <h5>Duration:</h5>
+                </div>
+                <div class="col-xs-9">
+                    <h5>@Model.project.ProjectDuration</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="container comments">
+    <div class="row">
+        <div class="col-xs-12">
+            <form method="get">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Enter your comment here</label>
+                    <textarea class="form-control" id="exampleInputEmail1" aria-describedby="comment" placeholder="Your comment here"></textarea>
+                </div>
+                <input type="hidden" name="Type" value="@ViewBag.project.ProjectType"/>
+                <input type="hidden" name="ProjectID" value="@ViewBag.project.ProjectID" />
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>*@
+

@@ -1,0 +1,84 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.col-no-padding {
+    padding: 0;
+}
+
+.navbar {
+    margin-bottom: 0;
+}
+
+.hero {
+    height: auto;
+    background-color: lightblue;
+    position:relative;
+}
+
+.hero .overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    position:absolute;
+}
+
+
+.hero video {
+    width: 100%;
+    max-height: 100%;
+    object-fit: fill;
+}
+
+.separator {
+    width: 100%;
+    background-color: #1279be;
+    padding: 30px 0;
+}
+
+section.projects .project {
+    padding-bottom: 20px;
+}
+
+
+    section.projects .project h4 {
+        color: #1279be;
+    }
+
+    section.projects .project img {
+        width: 100%;
+    }
+
+    .projects h1 {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #000;
+    }
+
+    .projects .row img {
+        width: 100%;
+    }
+
+    .about h1 {
+        border-bottom: 1px solid #000;
+        padding-bottom: 10px;
+    }
+
+.comments .row textarea {
+    max-width: 100%;
+}
+
+.comments {
+    padding-top: 10px;
+}
+
+.form-area {
+    background-color: #FAFAFA;
+    padding: 10px 40px 60px;
+    margin: 10px 0px 60px;
+    border: 1px solid GREY;
+}

@@ -1,0 +1,18 @@
+﻿@using Project2.Models;
+
+@{
+    ViewBag.Title = "Wood";
+}
+
+<div class="container projects">
+    <h1>Wood Projects</h1>
+
+    <div class="row">
+        @foreach (KeyValuePair<int, Project> entry in ViewBag.WoodProjects) {
+            <div class="col-sm-4 text-center col-sm-offset-@entry.Key">
+                <a href="@Url.Action("Project", "Projects", new { Type = entry.Value.ProjectType, ProjectID = entry.Key })"> <img src="@Url.Content(entry.Value.ProjectImage[0])" /> </a>
+                <h2>@Html.ActionLink(entry.Value.ProjectName, "Project", "Projects", new { Type = entry.Value.ProjectType, ProjectID = entry.Key }, null)</h2>
+            </div>
+        }
+    </div>
+</div>
