@@ -162,6 +162,7 @@ namespace Project2.Controllers
 
                     string sqlStatement = "INSERT INTO [User] (UserEmail, UserPassword, UserFirstName, UserLastName) VALUES ('" + model.Email + "', '" + model.Password + "', '" + model.FirstName + "', '" + model.LastName + "');";
                     db.Database.ExecuteSqlCommand(sqlStatement);
+
                     
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link

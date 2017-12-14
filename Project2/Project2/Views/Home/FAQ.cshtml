@@ -8,6 +8,7 @@
         @foreach (Project2.Models.Project project in Model.Projects) {
             <div class="col-md-3">
                 <h2>@project.ProjectName</h2>
+                <p>@Html.ActionLink("Add a Question", "Create", new { projectID = project.ProjectID })</p>
             </div>
             <div class="col-md-9">
                 @foreach (Project2.Models.ProjectQuestion faq in Model.ProjectQuestions.ToList().FindAll(x => x.ProjectID == project.ProjectID)) {
@@ -16,6 +17,7 @@
                     </div>
                     <div class="row">
                         <h5>@faq.Answer</h5>
+                        <span>@Html.ActionLink("Answer the question", "Edit", new { id = faq.ProjectQuestionID })</span>
                     </div>
                 }
             </div>

@@ -193,6 +193,7 @@
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProjectQuestionsController.cs" />
     <Compile Include="Controllers\ProjectsController.cs" />
     <Compile Include="DAL\ProjectContext.cs" />
     <Compile Include="Global.asax.cs">
@@ -302,6 +303,13 @@
     <Content Include="Views\Projects\Project.cshtml" />
     <Content Include="Views\Projects\Wood.cshtml" />
     <Content Include="Views\Home\FAQ.cshtml" />
+    <Content Include="Views\ProjectQuestions\Create.cshtml" />
+    <Content Include="Views\ProjectQuestions\Delete.cshtml" />
+    <Content Include="Views\ProjectQuestions\Details.cshtml" />
+    <Content Include="Views\ProjectQuestions\Edit.cshtml" />
+    <Content Include="Views\ProjectQuestions\Index.cshtml" />
+    <Content Include="Views\Home\Create.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

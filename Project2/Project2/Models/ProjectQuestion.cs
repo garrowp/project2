@@ -15,8 +15,10 @@ namespace Project2.Models {
 
         public int UserID { get; set; }
 
+        [Display(Name = "Question")]
         public string Question { get; set; }
 
+        [Display(Name = "Answer")]
         public string Answer { get; set; }
     }
 }
