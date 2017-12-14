@@ -82,3 +82,7 @@ section.projects .project {
     margin: 10px 0px 60px;
     border: 1px solid GREY;
 }
+
+.faq h2 {
+    margin-top: 0;
+}

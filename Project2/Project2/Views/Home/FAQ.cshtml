@@ -1,0 +1,25 @@
+﻿@model Project2.Models.FAQ
+@{
+    ViewBag.Title = "FAQ";
+}
+<div class="container faq">
+    <h1>FAQ</h1>
+    <div class="row">
+        @foreach (Project2.Models.Project project in Model.Projects) {
+            <div class="col-md-3">
+                <h2>@project.ProjectName</h2>
+            </div>
+            <div class="col-md-9">
+                @foreach (Project2.Models.ProjectQuestion faq in Model.ProjectQuestions.ToList().FindAll(x => x.ProjectID == project.ProjectID)) {
+                    <div class="row">
+                        <h4>@faq.Question</h4>
+                    </div>
+                    <div class="row">
+                        <h5>@faq.Answer</h5>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+

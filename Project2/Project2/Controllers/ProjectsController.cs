@@ -16,7 +16,6 @@ namespace Project2.Controllers
         public static Dictionary<int, Project1> WoodDictionary = new Dictionary<int, Project1>();
 
         // GET: Projects
-        [Authorize]
         public ActionResult Electronics()
         {
             ProjectCategory Electronics = new ProjectCategory();

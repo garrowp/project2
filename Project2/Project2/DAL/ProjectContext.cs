@@ -20,6 +20,6 @@ namespace Project2.DAL {
         public DbSet<ProjectMaterial> ProjectMaterials { get; set; }
         public DbSet<ProjectTool> ProjectTools { get; set; }
         public DbSet<User> Users { get; set; }
-        public ProjectQuestion ProjectQuestions { get; set; }
+        public DbSet<ProjectQuestion> ProjectQuestions { get; set; }
     }
 }

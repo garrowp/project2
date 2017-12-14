@@ -9,9 +9,9 @@ namespace Project2.Models {
     [Table("ProjectQuestion")]
     public class ProjectQuestion {
         [Key]
-        public int MissionQuestionID { get; set; }
+        public int ProjectQuestionID { get; set; }
 
-        public int MissionID { get; set; }
+        public int ProjectID { get; set; }
 
         public int UserID { get; set; }
 
